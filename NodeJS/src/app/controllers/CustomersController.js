@@ -29,11 +29,9 @@ class CustomersController {
   }
 
   // GET /customers/:id
-  show(req, res) {
+  async show(req, res) {
     const id = parseInt(req.params.id, 10);
-    const customerToShow = Customer.find(
-      (customer) => customer.id === Number(id)
-    );
+    const customerToShow = await Customer.findByPk(id);
     const status = customerToShow ? 200 : 404;
 
     return res

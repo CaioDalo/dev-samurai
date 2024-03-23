@@ -3,7 +3,7 @@ module.exports = {
   host: "localhost",
   username: "caiodalo",
   password: "1234",
-  database: "teste_dominando_nodejs",
+  database: "dominando_nodejs",
   define: {
     timestamps: true,
     underscored: true,
